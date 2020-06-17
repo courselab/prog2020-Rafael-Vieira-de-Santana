@@ -47,10 +47,10 @@ int is_prime (int a)
 		++i;
 	}
 	
-	if (sum == 2)              /* If "a" is divisble by 2 numbers between 1 and "a" ("sum" is equal to 2), "a" is prime. */
+	if (sum == 2)   /* If "a" is divisble by 2 numbers between 1 and "a" ("sum" is equal to 2), "a" is prime. */
 	return 1;
 	
-	else                       /* Otherwise, if "a" is divible by more than 2 numbers between 1 and a, "a" is not prime. */
+	else            /* Otherwise, if "a" is divible by more than 2 numbers between 1 and a, "a" is not prime. */
 	return 0;
 }
 
