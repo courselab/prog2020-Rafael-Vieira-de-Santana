@@ -58,7 +58,7 @@ C = *c;     /* "C" is the value of the variable located in the position pointed 
 		}
 	}
 	
-	else if (B <= A && B <= C);
+	else if (B <= A && B <= C)
 	{
 		*a = B;
 		
