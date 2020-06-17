@@ -23,7 +23,45 @@
 
 int is_prime (int a)
 {
-  return 0;
+	
+/*--------------------------------------------------------------------------/*
+| This function takes the input, a, divides it by every nunber from 1 to a, |
+| and checks if a is divisible by any other number other than 1 and itself. |
+/*--------------------------------------------------------------------------*/
+	
+	int i, sum, remainder;
+	
+	sum = 0;
+	i   = 1;
+	
+	while (i <= a)
+	{
+		remainder = (a % i);
+		
+		if (remainder == 0)   /* If "a" is divisible by  a number between 1 and a ( the remainder of the division is 0), */
+		++sum;                /* the value of the variable "sum" is increased by 1.                                      */
+		
+		else
+		;
+		
+		++i;
+	}
+	
+	if (sum == 2)              /* If "a" is divisble by 2 numbers between 1 and "a" ("sum" is equal to 2), "a" is prime. */
+	return 1;
+	
+	else                       /* Otherwise, if "a" is divible by more than 2 numbers between 1 and a, "a" is not prime. */
+	return 0;
+}
+
+int main ()
+{
+	int n;
+	n = 101;
+	
+	printf ("%d\n", is_prime(n));
+	
+	return 0;
 }
 
 #define USAGE "m003 <num>\n"
