@@ -30,11 +30,11 @@ int greatest (int x, int y, int z)
 	if (x >= y && x >= z)          /* If the first variable is greater or equal to the other two,                                                         */
 	return ("%d", x);              /* return it.                                                                                                          */
   
-    else if (y >= x &&  y >= z)    /* If the condidion above isn't met, test if the second variable is greater or equal to the other two.                 */
-    return ("%d", y);              /* if it is, return it.                                                                                                */
+	else if (y >= x &&  y >= z)    /* If the condidion above isn't met, test if the second variable is greater or equal to the other two.                 */
+	return ("%d", y);              /* if it is, return it.                                                                                                */
   
-    else                           /* if neither of the condidions is met, the only possibility is that the third variable is greather than the other two.*/
-    return ("%d", z);              /* so, if that is true, return the final variable.                                                                     */
+	else                           /* if neither of the condidions is met, the only possibility is that the third variable is greather than the other two.*/
+	return ("%d", z);              /* so, if that is true, return the final variable.                                                                     */
 }
 
 /* Do not edit this function. */
