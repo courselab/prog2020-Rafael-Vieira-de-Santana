@@ -31,10 +31,10 @@ int greatest (int a, int b, int c)
 }             /* return it.                                                                                                          */
   
     else if (b >= a &&  b >= c) {   /* If the condidion above isn't met, test if the second variable is greater or equal to the other two.                 */
-    a = b;   }          /* if it is, return it.                                                                                                */
+    a = b   }          /* if it is, return it.                                                                                                */
   
     else       {                    /* if neither of the condidions is met, the only possibility is that the third variable is greather than the other two.*/
-    a = c;  }           /* so, if that is true, return the final variable.                                                                     */
+    a = c  }           /* so, if that is true, return the final variable.                                                                     */
     
     return a;
 }
