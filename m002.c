@@ -28,11 +28,11 @@
 void sort (int *a, int *b, int *c)
 {	
 
-/* ------------------------------------------------------------------------------------- /* 
-| This function uses a similar process 3 times. Since the only difference betwen them    |
-| is wich variable is first then secondly considered, for the sake of organisation, this |
-| process is explainded only once.                                                       |
-/*---------------------------------------------------------------------------------------*/
+// -------------------------------------------------------------------------------------- // 
+// This function uses a similar process 3 times. Since the only difference betwen them    //
+// is wich variable is first then secondly considered, for the sake of organisation, this //
+// process is explainded only once.                                                       //
+//----------------------------------------------------------------------------------------//
 
 int A, B, C;
 
