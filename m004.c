@@ -50,7 +50,7 @@ int decimal (char *b)
 		
 		++i;
 		length = length - 1;
-   }
+	}
 	return sum;
 }
 
