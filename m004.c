@@ -35,7 +35,7 @@ int decimal (char *b)
 	length = 0;
 	sum = 0;
   
-	while (b[i+1] != 0 )
+	while (b[i] == '0' || b[i] == '1')
 	{
 		++i;
 	}
@@ -43,7 +43,7 @@ int decimal (char *b)
 	length = i - 1;
 	i = 0;
 	
-	while (b[i] == '0' || b[i] == '1' )
+	while (b[i] == '0' || b[i] == '1')
 	{
 		if (b[i] == '1')
 		sum = sum + pow(2,length);
@@ -51,6 +51,7 @@ int decimal (char *b)
 		++i;
 		length = length - 1;
 	}
+  
 	return sum;
 }
 
