@@ -70,11 +70,6 @@ int pitagorean (char *s)
 		if (s[i] == ' ')
 		sum = sum + 0;
 		
-		else
-		{
-			return (printf ("warning: a character that is not permited has been detected.\n"));
-		}
-		
 		++i;
 	}
 	
