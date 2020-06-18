@@ -23,7 +23,7 @@
 /* Return the greatest among a, b and c. */
 
 int greatest (int x, int y, int z)
-{
+{ 
 	if (x >= y && x >= z) {           /* If the first variable is greater or equal to the other two,                                                         */
 	return x; }                       /* return it.                                                                                                          */
   
