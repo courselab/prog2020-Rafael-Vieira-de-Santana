@@ -25,13 +25,6 @@
 
 int pitagorean (char *s)
 {
-  return 0;
-}
-
-/* Do not edit function main. */
-
-int pitagorean (char *s)
-{
 	int i, sum;
 	i = 0;
 	sum = 0;
@@ -86,6 +79,22 @@ int pitagorean (char *s)
 	}
 	
 	return sum;
+}
+
+/* Do not edit function main. */
+
+int main (int argc, char **argv)
+{
+  int n;
+  char name[MAX];
+
+  fgets (name, MAX-1, stdin);
+  
+  n = pitagorean (name);
+  
+  printf ("%d\n", n);
+
+  return 0;
 }
 
 /*  
