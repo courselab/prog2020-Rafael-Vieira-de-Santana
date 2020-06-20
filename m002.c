@@ -28,7 +28,7 @@
 void sort (int *a, int *b, int *c)
 {	
 
-// -------------------------------------------------------------------------------------- // 
+//----------------------------------------------------------------------------------------// 
 // This function uses a similar process 3 times. Since the only difference betwen them    //
 // is wich variable is first then secondly considered, for the sake of organisation, this //
 // process is explainded only once.                                                       //
@@ -43,18 +43,18 @@ C = *c;  // "C" is the value of the variable located in the position pointed by 
 
 	if (A <= B && A <= C)     // If "A" is the lowest value of the three,        
 	{                  
-		*a = A;           // change the variable *a to A.                    
+		*a = A;               // change the variable *a to A.                    
 		                         
-		if (B <= C)       // Furthermore, if "B" is the second lowest value, 
+		if (B <= C)           // Furthermore, if "B" is the second lowest value, 
 		{
-			*b = B;   // change the variable *b to B,                    
-			*c = C;   // and the variable *c to C.                       
+			*b = B;           // change the variable *b to B,                    
+			*c = C;           // and the variable *c to C.                       
 		}
 		
-		else              // Otherwise if "C" is the second lowest,          
+		else                  // Otherwise if "C" is the second lowest,          
 		{
-			*b = C;   // change the variable *b to C,                    *        
-			*c = B;   // and the variable *c to B.                       
+			*b = C;           // change the variable *b to C,                    *        
+			*c = B;           // and the variable *c to B.                       
 		}
 	}
 	
@@ -72,7 +72,7 @@ C = *c;  // "C" is the value of the variable located in the position pointed by 
 		else
 		{
 			*b = C;
-			*c = B;
+			*c = A;
 		}
 	}
 	
@@ -89,7 +89,7 @@ C = *c;  // "C" is the value of the variable located in the position pointed by 
 		else
 		{
 			*b = B;
-			*c = C;
+			*c = A;
 		}
 	}	
 }
