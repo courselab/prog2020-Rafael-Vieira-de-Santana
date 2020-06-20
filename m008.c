@@ -28,7 +28,9 @@
 /* Converts the string 's' from first-middle-last name 
    form into LAST-first-middle form. */
 
-int i, j;
+void lastname (char *s)
+{
+	int i, j;
 	int numberofspaces, firstletter, firstspace, count, total, state;
 	char a[MAX];
 	
