@@ -28,13 +28,23 @@
 /* Converts the string 's' from first-middle-last name 
    form into LAST-first-middle form. */
 
-void lastname (char *s)
-{
-	int i, j;
-	int numberofspaces, firstletter, firstspace, count;
+int i, j;
+	int numberofspaces, firstletter, firstspace, count, total, state;
 	char a[MAX];
 	
-	numberofspaces = firstletter = j = count = 0;
+	numberofspaces = firstletter = j = count = total = 0;
+	
+	for (i = 0; s[i+1] != 0; ++i)
+	++total;
+	
+	if (s[total-1] == ' ')
+	{
+		s[total] = 0;
+		state = 1;
+	}
+	
+	else
+	state = 0;
 	
 	for (i = 0; s[i+1] != 0; ++i) //counts the total number of spaces and stores it in the variable "numberofspaces";
 	{
@@ -89,6 +99,15 @@ void lastname (char *s)
 	
 	for (i = 0; a[i] != 0; ++i) //copies all the contents from the vector "a" to the vector "s".
 	s[i] = a[i];
+	
+	if (state = 1)
+	{
+		s[i] = ' ';
+		s[i +1] = 0;
+	}
+	
+	else
+	;
 	
 	/*
 	for testing purposes:
