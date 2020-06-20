@@ -29,7 +29,7 @@ int pitagorean (char *s)
 	i = 0;
 	sum = 0;
 	
-	while (s[i+1] != 0)
+	while (s[i] != 0)
 	{
 		if (s[i] == 'a' || s[i] == 'j' || s[i] == 's' || s[i] == 'A' || s[i] == 'J' || s[i] == 'S')
 		sum = sum + 1;
