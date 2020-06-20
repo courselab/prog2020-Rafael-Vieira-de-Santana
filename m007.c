@@ -33,7 +33,7 @@ int lettercount (char *s)
 	
 	for (i = 0; s[i+1] != 0 ; ++i)
 	{
-		if (s[i] == ' ')
+		if (s[i] == ' ' || s[i] == '.' || s[i] == ',' || s[i] == '!' || s[i] == '?' || s[i] == ';')
 		;
 		
 		else 
