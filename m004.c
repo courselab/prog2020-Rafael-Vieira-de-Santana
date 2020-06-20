@@ -27,7 +27,7 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
-int pow (int base, int exp)
+int power (int base, int exp)
 {
 	int i, result;
 	
@@ -57,7 +57,7 @@ int decimal (char *b)
 	while (b[i] == '0' || b[i] == '1')
 	{
 		if (b[i] == '1')
-		sum = sum + pow(2,length);
+		sum = sum + power(2,length);
 		
 		++i;
 		length = length - 1;
