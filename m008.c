@@ -30,6 +30,69 @@
 
 void lastname (char *s)
 {
+	int i, j;
+	int numberofspaces, firstletter, firstspace, count;
+	char a[MAX];
+	
+	numberofspaces = firstletter = j = count = 0;
+	
+	for (i = 0; s[i+1] != 0; ++i) //counts the total number of spaces and stores it in the variable "numberofspaces";
+	{
+		if (s[i] == ' ')
+		++ numberofspaces;
+	}
+	
+	for (i = 0; j < numberofspaces; ++i) //identifies the location of the first letter of the last name and stores it in the vairable "firstletter";
+	{
+		if (s[i] == ' ')
+		++j;
+	}
+	
+	firstletter = i;
+	j = 0;
+	
+	for (i = 0; j < 1; ++i) //identifies the location of the first space and stores it in the variable "firstspace";
+	{
+		if (s[i] == ' ')
+		++j;
+	}
+	
+	firstspace = i;
+	
+	for (i = 0; s[i+1] != 0; ++i) //copies the last name to the vector "a";
+	{
+		a[i] = s[i+firstletter];
+	}
+	
+	for (i = 0; a[i+1] != 0; ++i) //counts the number of characters in the last name and stores it in the variable "count";
+	++count;
+	
+	a[ count ] = ','; //adds a comma after the last name;
+	a[count+1] = ' '; //adds a space afther the comma;
+	
+	
+	for (i = 0; i+1 < firstletter; ++i) //copies the first and last names after the space;
+	{
+		a[count+2+i] = s[i];
+	}
+	
+	a[count+2+i] = 0;
+	
+	for (i = 0; i < count; ++i) //sets the lowercase letters in the last name to uppercase;
+	{
+		if (a[i] >= 97)
+		a[i] = a[i] - 32;
+		
+		else
+		;
+	}
+	
+	for (i = 0; a[i] != 0; ++i) //copies all the contents from the vector "a" to the vector "s".
+	s[i] = a[i];
+	
+	printf("current name: %s\n\n", a);
+	printf("numberofspaces = %d, firstletter = %d, firstspace = %d, count = %d\n\n", numberofspaces, firstletter, firstspace, count);
+
 }
 
 
