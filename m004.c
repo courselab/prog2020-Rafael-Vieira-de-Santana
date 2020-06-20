@@ -20,13 +20,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 
 /* Return the value in decimal base of the string b, interpreted
    as the a positive binary number. If the string contains any
    characters other than '1's and '0's, truncate the string
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
+
+int pow (int base, int exp)
+{
+	int i, result;
+	
+	result = 1;
+	
+	for (i = 0; i < exp; ++i)
+	result = result*base;
+	
+	return result;
+}
 
 int decimal (char *b)
 {
