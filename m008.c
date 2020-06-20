@@ -90,9 +90,11 @@ void lastname (char *s)
 	for (i = 0; a[i] != 0; ++i) //copies all the contents from the vector "a" to the vector "s".
 	s[i] = a[i];
 	
+	/*
+	for testing purposes:
 	printf("current name: %s\n\n", a);
 	printf("numberofspaces = %d, firstletter = %d, firstspace = %d, count = %d\n\n", numberofspaces, firstletter, firstspace, count);
-
+	/*
 }
 
 
