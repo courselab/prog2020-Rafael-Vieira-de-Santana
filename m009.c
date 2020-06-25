@@ -19,6 +19,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define NOT 0
+#define CHANGE 1
 #define MAX 100
 
 /* Sort the first 'n' integers values in 'vector'. */
