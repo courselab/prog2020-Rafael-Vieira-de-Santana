@@ -56,7 +56,8 @@ int wordcount (char *filename)
 				state = OUT;
 			}
 			
-			else if (state == IN)
+			else
+			if (state == IN)
 			{
 				if (a[i] == ' ' || a[i] == '\n' || a[i] == '\t')
 				{
