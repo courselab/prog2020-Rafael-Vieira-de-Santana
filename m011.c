@@ -21,6 +21,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#define MAX 256
+#define IN 1
+#define	OUT 0
 
 #define USAGE "m011 <filename>\n"
 
@@ -28,7 +31,50 @@
 
 int wordcount (char *filename)
 {
-  return 0;
+	FILE *fp;
+	char a[MAX];
+	int i, count, state;
+
+	fp = fopen (filename, "r");
+	
+	state = OUT;
+	count = 0;
+	
+	while (fgets (a, MAX, fp) != NULL)
+	{
+		for (i = 0; a[i] != 0; ++i)
+		{
+			if (state == OUT)
+			{
+				if (a[i] != ' ' || a[i] != '\n' || a[i] != '\t')
+				{
+					state = IN;
+					++count;
+				}
+				
+				else
+				state = OUT;
+			}
+			
+			else if (state == IN)
+			{
+				if (a[i] == ' ' || a[i] == '\n' || a[i] == '\t')
+				{
+					state = OUT;
+				}
+				
+				else
+				state = IN;
+			}
+			
+			else
+			;
+		}
+	}
+	
+	fclose (fp);
+	
+	return count;
 }
 
 /* Do not edit function main. */
