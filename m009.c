@@ -32,24 +32,24 @@ void sort (int* vector, int n)
 	
 	for ( i = 0; i+1 < n; ++i)
 	{
-		printf("----- pass %d ----- \n", i);
+		//printf("----- pass %d ----- \n", i);
 		
-		printf("current config: ");
+		//printf("current config: ");
 		
 		for (k = 0; k < n; ++k)
-		printf("%d ", vector[k]);
+		//printf("%d ", vector[k]);
 		
-		printf ("\n");
+		//printf ("\n");
 		
 		for (j = i+1; j < n; ++j)
 		{
-			printf("comparing variable %d to variable %d\n", i, j);
+			//printf("comparing variable %d to variable %d\n", i, j);
 			
 			if (state == CHANGE)
 			{
 				if (vector [j] < localmin)
 				{
-					printf("variable %d is even smaller than variable %d\n", j, localmin);
+					//printf("variable %d is even smaller than variable %d\n", j, localmin);
 					
 					localmin = vector[j];
 					location = j;
@@ -66,7 +66,7 @@ void sort (int* vector, int n)
 					
 					state = CHANGE;
 					
-					printf("variable %d is smaller than variable %d\n", j, i);
+					//printf("variable %d is smaller than variable %d\n", j, i);
 				}
 			}
 		}
@@ -76,11 +76,10 @@ void sort (int* vector, int n)
 			vector [location] = vector [i];
 			vector [i] = localmin;
 			
-			printf("localmin: %d\n", localmin);
+			//printf("localmin: %d\n", localmin);
 			
 			state = NOT;
 		}
-		
 	}
 }
 
