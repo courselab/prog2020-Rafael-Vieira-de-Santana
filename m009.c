@@ -25,6 +25,61 @@
 
 void sort (int* vector, int n)
 {
+	int i, j, k, localmin, location, state;
+	state = NOT;
+	
+	for ( i = 0; i+1 < n; ++i)
+	{
+		printf("----- pass %d ----- \n", i);
+		
+		printf("current config: ");
+		
+		for (k = 0; k < n; ++k)
+		printf("%d ", vector[k]);
+		
+		printf ("\n");
+		
+		for (j = i+1; j < n; ++j)
+		{
+			printf("comparing variable %d to variable %d\n", i, j);
+			
+			if (state == CHANGE)
+			{
+				if (vector [j] < localmin)
+				{
+					printf("variable %d is even smaller than variable %d\n", j, localmin);
+					
+					localmin = vector[j];
+					location = j;
+				}
+			}
+				
+			else
+			if (state == NOT)
+			{
+				if (vector[i] > vector [j])
+				{
+					localmin = vector[j];
+					location = j;
+					
+					state = CHANGE;
+					
+					printf("variable %d is smaller than variable %d\n", j, i);
+				}
+			}
+		}
+		
+		if (state == CHANGE)
+		{
+			vector [location] = vector [i];
+			vector [i] = localmin;
+			
+			printf("localmin: %d\n", localmin);
+			
+			state = NOT;
+		}
+		
+	}
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"
