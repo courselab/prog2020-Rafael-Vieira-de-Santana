@@ -27,10 +27,43 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
+int power (int base, int exp)
+{
+	int i, result;
+	
+	result = 1;
+	
+	for (i = 0; i < exp; ++i)
+	result = result*base;
+	
+	return result;
+}
+
 int decimal (char *b)
 {
+	int i, length, sum;
+	i = 0;
+	length = 0;
+	sum = 0;
   
-  return 0;
+	while (b[i] == '0' || b[i] == '1')
+	{
+		++i;
+	}
+	
+	length = i - 1;
+	i = 0;
+	
+	while (b[i] == '0' || b[i] == '1')
+	{
+		if (b[i] == '1')
+		sum = sum + power(2,length);
+		
+		++i;
+		length = length - 1;
+	}
+  
+	return sum;
 }
 
 #define USAGE "m004 <string>\n"

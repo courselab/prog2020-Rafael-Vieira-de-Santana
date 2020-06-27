@@ -30,7 +30,83 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+	int totaldays, dayoftheweek;
+  
+	totaldays = day - 1;
+  
+	if (month == 1)
+	totaldays = totaldays + 0;
+
+	else
+	if (month == 2)
+	totaldays = totaldays + 31;
+  
+	else
+	if (month == 3)
+	totaldays = totaldays + 31 + 29;
+	
+	else
+	if (month == 4)
+	totaldays = totaldays + 31 + 29 + 31;
+	
+	else
+	if (month == 5)
+	totaldays = totaldays + 31 + 29 + 31 + 30;
+	
+	else
+	if (month == 6)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31;
+	
+	else
+	if (month == 7)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30;
+
+	else
+	if (month == 8)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30 + 31;
+	
+	else
+	if (month == 9)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31;
+	
+	else
+	if (month == 10)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+	
+	else
+	if (month == 11)
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+	
+	else
+	totaldays = totaldays + 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
+
+	dayoftheweek = totaldays % 7;
+  
+	if (dayoftheweek == 0)
+	return 3;
+  
+	else
+	if (dayoftheweek == 1)
+	return 4;
+  
+	else
+	if (dayoftheweek == 2)
+	return 5;
+  
+	else
+	if (dayoftheweek == 3)
+	return 6;
+	
+	else
+	if (dayoftheweek == 4)
+	return 0;
+	
+	else
+	if (dayoftheweek == 5)
+	return 1;
+	
+	else
+	return 2;
 }
 
 /* Do not edit function main. */

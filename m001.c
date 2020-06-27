@@ -22,9 +22,17 @@
 
 /* Return the greatest among a, b and c. */
 
-int greatest (int a, int b, int c)
+int greatest (int x, int y, int z)
 {
-  return a;
+	if (x >= y && x >= z)          // If the first variable is greater or equal to the other two,
+	return x;                      // return it.
+  
+	else
+	if (y >= x &&  y >= z)         // If the condidion above isn't met, test if the second variable is greater or equal to the other two.
+	return y;                      // If it is, return it.
+  
+	else                           // If neither of the condidions is met, the only possibility is that the third variable is greather than the other two.
+	return z;                      // So, if that is true, return the final variable.
 }
 
 /* Do not edit this function. */

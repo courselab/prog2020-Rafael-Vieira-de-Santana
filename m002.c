@@ -26,7 +26,72 @@
 /* Sort three integers x, y, z in ascending order.*/
 
 void sort (int *a, int *b, int *c)
-{
+{	
+
+//----------------------------------------------------------------------------------------// 
+// This function uses a similar process 3 times. Since the only difference betwen them    //
+// is wich variable is first then secondly considered, for the sake of organisation, this //
+// process is explainded only once.                                                       //
+//----------------------------------------------------------------------------------------//
+
+int A, B, C;
+
+A = *a;  // "A" is the value of the variable located in the position pointed by *a. 
+B = *b;  // "B" is the value of the variable located in the position pointed by *b. 
+C = *c;  // "C" is the value of the variable located in the position pointed by *c. 
+
+
+	if (A <= B && A <= C)     // If "A" is the lowest value of the three,        
+	{                  
+		*a = A;               // change the variable *a to A.                    
+		                         
+		if (B <= C)           // Furthermore, if "B" is the second lowest value, 
+		{
+			*b = B;           // change the variable *b to B,                    
+			*c = C;           // and the variable *c to C.                       
+		}
+		
+		else                  // Otherwise if "C" is the second lowest,          
+		{
+			*b = C;           // change the variable *b to C,                    *        
+			*c = B;           // and the variable *c to B.                       
+		}
+	}
+	
+	else 
+	if (B <= A && B <= C)
+	{
+		*a = B;
+		
+		if (A <= C)
+		{
+			*b = A;
+			*c = C;
+		}
+		
+		else
+		{
+			*b = C;
+			*c = A;
+		}
+	}
+	
+	else
+	{
+		*a = C;
+		
+		if (A <= B)
+		{
+			*b = A;
+			*c = B;
+		}
+		
+		else
+		{
+			*b = B;
+			*c = A;
+		}
+	}	
 }
 
 /* Do not edit this function. */
